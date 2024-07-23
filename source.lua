@@ -25,3 +25,9 @@ Fluent:Notify({
         Content = "This script is intended to be useful.",
         Duration = 5 -- Set to nil to make the notification not disappear
 })
+
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
