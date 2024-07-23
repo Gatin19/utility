@@ -1,6 +1,10 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+getgenv().MinimizeID = "rbxassetid://18619455505"
+getgenv().Size = UDim2.new(0, 36, 0, 36)
+
+local MinimizeByDavi999 = loadstring(game:HttpGet("https://raw.githubusercontent.com/zDavi999/MinimizeButtons/main/FluentUiMinimize.Lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "Utility",
