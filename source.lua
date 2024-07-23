@@ -12,6 +12,12 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Player = Window:AddTab({ Title = "Player", Icon = "" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+
 local Options = Fluent.Options
 
 Fluent:Notify({
@@ -19,9 +25,3 @@ Fluent:Notify({
         Content = "This script is intended to be useful.",
         Duration = 5 -- Set to nil to make the notification not disappear
 })
-
-local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
-}
