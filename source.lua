@@ -17,7 +17,7 @@ local Tabs = {
     Player = Window:AddTab({ Title = "Player", Icon = "user" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
-
+local walkspeed = 25
 local Options = Fluent.Options
 
 Fluent:Notify({
@@ -34,7 +34,7 @@ local Input = Tabs.Player:AddInput("Input", {
     Numeric = true, -- Only allows numbers
     Finished = false, -- Only calls callback when you press enter
     Callback = function(Value)
-        local walkspeed = value
+        walkspeed = value
     end
 })
 
@@ -42,7 +42,7 @@ Tabs.Player:AddButton({
     Title = "Set walkspeed",
     Description = "",
     Callback = function()
-        
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = walkspeed
     end
 })
 
