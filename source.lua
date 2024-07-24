@@ -26,6 +26,26 @@ Fluent:Notify({
     Duration = 5 -- Set to nil to make the notification not disappear
 })
 
+local Input = Tabs.Player:AddInput("Input", {
+    Title = "Walkspeed",
+    Description = "change your speed",
+    Default = "25",
+    Placeholder = "Placeholder",
+    Numeric = true, -- Only allows numbers
+    Finished = false, -- Only calls callback when you press enter
+    Callback = function(Value)
+        local walkspeed = value
+    end
+})
+
+Tabs.Player:AddButton({
+    Title = "Set walkspeed",
+    Description = "",
+    Callback = function()
+        
+    end
+})
+
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
