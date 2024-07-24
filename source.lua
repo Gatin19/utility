@@ -2,6 +2,35 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
+local gui = Instance.new("ScreenGui")
+gui.Name = "patrickGui"
+gui.Parent = game.CoreGui
+
+--///patrick gui maker///--
+
+
+-- put your mainframe into the screengui that I have made (frame.Parent = gui) 
+
+local b1 = Instance.new("TextButton")
+b1.Size = UDim2.new(0.06, 0, 0.09, 0)
+b1.Position = UDim2.new(0.8, 0, 0.1, 0)
+b1.BackgroundColor3 = Color3.new(0, 0, 0)
+b1.BorderColor3 = Color3.new(0, 0, 0)
+b1.BorderSizePixel = 1
+b1.Text = "Open/Close"
+b1.BackgroundTransparency = 0.4
+b1.TextColor3 = Color3.new(255, 255, 255)
+b1.Draggable = true
+b1.Parent = gui
+
+local b1Corner = Instance.new("UICorner")
+b1Corner.CornerRadius = UDim.new(0, 5)
+b1Corner.Parent = b1Corner
+
+b1.MouseButton1Down:Connect(function()
+  game:Getservice("VirtualInputManager"):SendKeyEvent(true, "Enum.KeyCode.LeftControl", false, game)
+  end)
+
 local Window = Fluent:CreateWindow({
     Title = "Utility",
     SubTitle = "by gatin__",
