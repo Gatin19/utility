@@ -21,9 +21,9 @@ local Tabs = {
 local Options = Fluent.Options
 
 Fluent:Notify({
-        Title = "Welcome user ",
-        Content = "This script is intended to be useful.",
-        Duration = 5 -- Set to nil to make the notification not disappear
+    Title = "Welcome user ",
+    Content = "This script is intended to be useful.",
+    Duration = 5 -- Set to nil to make the notification not disappear
 })
 
 SaveManager:SetLibrary(Fluent)
@@ -38,8 +38,7 @@ gui.Parent = game.CoreGui
 
 --///patrick gui maker///--
 
-
--- put your mainframe into the screengui that I have made (frame.Parent = gui) 
+-- put your mainframe into the screengui that I have made (frame.Parent = gui)
 
 local b1 = Instance.new("TextButton")
 b1.Size = UDim2.new(0.06, 0, 0.09, 0)
@@ -55,9 +54,8 @@ b1.Parent = gui
 
 local b1Corner = Instance.new("UICorner")
 b1Corner.CornerRadius = UDim.new(0, 5)
-b1Corner.Parent = b1Corner
+b1Corner.Parent = b1
 
 b1.MouseButton1Down:Connect(function()
-  game:Getservice("VirtualInputManager"):SendKeyEvent(true, "Enum.KeyCode.LeftControl", false, game)
-  end)
-
+    game:GetService("VirtualInputManager"):SendKeyEvent(true, Enum.KeyCode.LeftControl, false, game)
+end)
