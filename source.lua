@@ -26,6 +26,8 @@ Fluent:Notify({
     Duration = 5 -- Set to nil to make the notification not disappear
 })
 
+Tab:AddSection("WalkSpeed")
+
 local Input = Tabs.Player:AddInput("Input", {
     Title = "Walkspeed",
     Description = "change your speed",
