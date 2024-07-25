@@ -17,7 +17,8 @@ local Tabs = {
     Player = Window:AddTab({ Title = "Player", Icon = "user" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
-local walkspeed = 25
+local walkspeed = 16
+local jumpPower = 50
 local Options = Fluent.Options
 
 Fluent:Notify({
@@ -28,7 +29,7 @@ Fluent:Notify({
 
 Tab:AddSection("WalkSpeed")
 
-local Input = Tabs.Player:AddInput("Input", {
+Tabs.Player:AddInput("Input", {
     Title = "Walkspeed",
     Description = "change your speed",
     Default = "25",
@@ -53,6 +54,36 @@ Tabs.Player:AddButton({
     Description = "",
     Callback = function()
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+})
+
+Tab:AddSection("JumpPower")
+
+Tabs.Player:AddInput("Input", {
+    Title = "JumpPower",
+    Description = "change your jumpPower",
+    Default = "50",
+    Placeholder = "Placeholder",
+    Numeric = true, -- Only allows numbers
+    Finished = false, -- Only calls callback when you press enter
+    Callback = function(Value)
+        jumpPower = Value
+    end
+})
+
+Tabs.Player:AddButton({
+    Title = "Set jumpPower",
+    Description = "",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = jumpPower
+    end
+})
+
+Tabs.Player:AddButton({
+    Title = "Reset jumpPower",
+    Description = "",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
     end
 })
 
