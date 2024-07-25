@@ -48,6 +48,14 @@ Tabs.Player:AddButton({
     end
 })
 
+Tabs.Player:AddButton({
+    Title = "Reset walkspeed",
+    Description = "",
+    Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+})
+
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
