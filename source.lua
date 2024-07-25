@@ -59,6 +59,7 @@ Tabs.Player:AddButton({
 
 local SjumpPower = Tabs.Player:AddSection("JumpPower")
 
+
 Tabs.Player:AddInput("Input", {
     Title = "JumpPower",
     Description = "change your jumpPower",
