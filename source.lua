@@ -27,7 +27,7 @@ Fluent:Notify({
     Duration = 5 -- Set to nil to make the notification not disappear
 })
 
-Tabs.Player:AddSection("WalkSpeed")
+local WalkSpeed = Tabs.Player:AddSection("WalkSpeed")
 
 Tabs.Player:AddInput("Input", {
     Title = "Walkspeed",
@@ -57,7 +57,7 @@ Tabs.Player:AddButton({
     end
 })
 
-Tabs.Player:AddSection("JumpPower")
+local JumpPower = Tabs.Player:AddSection("JumpPower")
 
 Tabs.Player:AddInput("Input", {
     Title = "JumpPower",
