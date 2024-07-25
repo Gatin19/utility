@@ -34,7 +34,7 @@ local Input = Tabs.Player:AddInput("Input", {
     Numeric = true, -- Only allows numbers
     Finished = false, -- Only calls callback when you press enter
     Callback = function(Value)
-        walkspeed = value
+        walkspeed = Value
     end
 })
 
