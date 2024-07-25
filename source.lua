@@ -79,7 +79,8 @@ Tabs.Player:AddButton({
     Title = "Reset jumpPower",
     Description = "",
     Callback = function()
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = jumpPower
+
     end
 })
 
