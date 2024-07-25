@@ -27,8 +27,6 @@ Fluent:Notify({
     Duration = 5 -- Set to nil to make the notification not disappear
 })
 
-local SwalkSpeed = Tabs.Player:AddSection("WalkSpeed")
-
 Tabs.Player:AddInput("Input", {
     Title = "Walkspeed",
     Description = "change your speed",
@@ -56,9 +54,6 @@ Tabs.Player:AddButton({
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
     end
 })
-
-local SjumpPower = Tabs.Player:AddSection("JumpPower")
-
 
 Tabs.Player:AddInput("Input", {
     Title = "JumpPower",
